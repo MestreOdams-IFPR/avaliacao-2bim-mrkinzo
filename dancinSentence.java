@@ -25,11 +25,11 @@ public class dancinSentence {
             char[] vetCh = veString[i].toCharArray();
             for (int j = 0; j < vetCh.length; j++) {
                 if (checkIfUpper(vetCh) == false) {
-                    vetCh[j++] = Character.toUpperCase(vetCh[j]);
+                    vetCh[j++] = Character.toUpperCase(vetCh[j++]);
                 } else {
                     checkIfLower(vetCh);
                     if (checkIfLower(vetCh) == true) {
-                        vetCh[j] = Character.toLowerCase(vetCh[j]);
+                        vetCh[j++] = Character.toLowerCase(vetCh[j++]);
                     }
                 }
 
