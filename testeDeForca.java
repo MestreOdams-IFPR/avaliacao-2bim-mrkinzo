@@ -2,6 +2,7 @@
 import java.util.Scanner;
 
 public class testeDeForca {
+
     final static Scanner LER = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -9,16 +10,16 @@ public class testeDeForca {
         int[] vetMelhores = new int[5];
         preenchervetor(vetCandidatos);
         ordenarVetor(vetCandidatos);
-       vetMelhores = preencherMaior(vetCandidatos, vetMelhores);
-       int pontosTotais=somarMaiores(vetMelhores);
-       System.out.println(pontosTotais);
+        vetMelhores = preencherMaior(vetCandidatos, vetMelhores);
+        int pontosTotais = somarMaiores(vetMelhores);
+        System.out.println(pontosTotais);
 
     }
 
     public static int somarMaiores(int[] vetMelhores) {
-        int x=0;
+        int x = 0;
         for (int index = 0; index < vetMelhores.length; index++) {
-           x+=vetMelhores[index];
+            x += vetMelhores[index];
         }
         return x;
     }
@@ -65,12 +66,13 @@ public class testeDeForca {
             } else {
                 vetCandidatos[k++] = right[j++];
             }
-            while (i < left.length) {
-                vetCandidatos[k++] = left[i++];
-            }
-            while (j < right.length) {
-                vetCandidatos[k++] = right[j++];
-            }
+
+        }
+        while (i < left.length) {
+            vetCandidatos[k++] = left[i++];
+        }
+        while (j < right.length) {
+            vetCandidatos[k++] = right[j++];
         }
     }
 }

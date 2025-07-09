@@ -24,13 +24,8 @@ public class dancinSentence {
         for (int i = 0; i < veString.length - 1; i++) {
             char[] vetCh = veString[i].toCharArray();
             for (int j = 0; j < vetCh.length; j++) {
-                if (checkIfUpper(vetCh) == false) {
-                    vetCh[j++] = Character.toUpperCase(vetCh[j++]);
-                } else {
-                    checkIfLower(vetCh);
-                    if (checkIfLower(vetCh) == true) {
-                        vetCh[j++] = Character.toLowerCase(vetCh[j++]);
-                    }
+                if (Character.isLetter(vetCh[j])&&Character.isLowerCase(vetCh[j])) {
+                    Character.toUpperCase(vetCh[j]);
                 }
 
                 x += vetCh;
@@ -40,25 +35,5 @@ public class dancinSentence {
         return veString;
     }
 
-    public static boolean checkIfUpper(char[] vetCh) {
-        boolean Uc = false;
-        for (int i = 0; i < vetCh.length; i++) {
 
-            if (Character.isUpperCase(vetCh[i])) {
-                return Uc = true;
-            }
-        }
-        return Uc;
-    }
-
-    public static boolean checkIfLower(char[] vetCh) {
-        boolean Lc = false;
-
-        for (int i = 0; i < vetCh.length; i++) {
-            if (Character.isLowerCase(vetCh[i])) {
-                return Lc = true;
-            }
-        }
-        return Lc;
-    }
 }
