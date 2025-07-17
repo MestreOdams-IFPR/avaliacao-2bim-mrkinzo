@@ -63,12 +63,12 @@ public class listaBEE {
     }
 
     private static String buscarnome(int q, String[] vetLista) {
-        String n="";
-       for (int i = 0; i < vetLista.length; i++) {
-         if (i==q) {
-            n=vetLista[q];
-         } 
-       }
-       return  n;
+        String n = "";
+        for (int i = 0; i < vetLista.length; i++) {
+            if (i == q) {
+                n = vetLista[q];
+            }
+        }
+        return n;
     }
 }

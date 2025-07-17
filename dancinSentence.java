@@ -24,7 +24,7 @@ public class dancinSentence {
         for (int i = 0; i < veString.length - 1; i++) {
             char[] vetCh = veString[i].toCharArray();
             for (int j = 0; j < vetCh.length; j++) {
-                if (Character.isLetter(vetCh[j])&&Character.isLowerCase(vetCh[j])) {
+                if (Character.isLetter(vetCh[j]) && Character.isLowerCase(vetCh[j])) {
                     Character.toUpperCase(vetCh[j]);
                 }
 
@@ -34,6 +34,5 @@ public class dancinSentence {
         }
         return veString;
     }
-
 
 }
